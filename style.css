@@ -1,0 +1,28 @@
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+}
+
+.left {
+    width: 500px;
+    height: 100vh;
+    background-image: url(images/greenery.jpg);
+    background-size: 500px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+#signUpForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputLine {
+    display: flex;
+}
