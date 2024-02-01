@@ -1,5 +1,18 @@
+@font-face {
+    font-family: norse-bold;
+    src: url(fonts/Norse-Bold.otf);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
-    font-size: 62.5%;
+    font-size: 10px;
 }
 
 body {
@@ -7,10 +20,45 @@ body {
 }
 
 .left {
-    width: 500px;
-    height: 100vh;
     background-image: url(images/greenery.jpg);
-    background-size: 500px;
+    background-size: cover;
+    width: max(40vw, 500px);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left > div {
+    margin-top: 20rem;
+    width: 100%;
+    height: 20rem;
+    background-color: rgba(33, 33, 33, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoImage {
+    height: 85%;
+}
+
+#logoText {
+    height: 10rem;
+    font-family: norse-bold;
+    color: #fff;
+    font-size: 10rem;
+    line-height: 1.2;
+}
+
+.left > footer,
+.left > footer > a {
+    color: #fff;
+}
+
+.left > footer {
+    margin-bottom: 1rem;
 }
 
 .right {
