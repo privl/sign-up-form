@@ -13,6 +13,7 @@
 
 :root {
     font-size: 10px;
+    --left-width: min(40vw, 600px);
 }
 
 body {
@@ -22,7 +23,7 @@ body {
 .left {
     background-image: url(images/greenery.jpg);
     background-size: cover;
-    width: max(40vw, 500px);
+    width: var(--left-width);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -33,7 +34,7 @@ body {
 .left > div {
     margin-top: 20rem;
     width: 100%;
-    height: 20rem;
+    height: 15rem;
     background-color: rgba(33, 33, 33, 0.6);
     display: flex;
     justify-content: center;
@@ -49,7 +50,7 @@ body {
     font-family: norse-bold;
     color: #fff;
     font-size: 10rem;
-    line-height: 1.2;
+    line-height: 1.25;
 }
 
 .left > footer,
@@ -64,13 +65,103 @@ body {
 .right {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #f0f4eb;
+    width: calc(100vw - var(--left-width));
+    height: 100vh;
+}
+
+.someText,
+#forLogIn {
+    padding:  0 4rem;
+}
+
+.someText {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.someText > p {
+    width: 64rem;
+    line-height: 1.2;
+}
+
+.someText > p:nth-child(1) {
+    margin-bottom: 2rem;
+}
+
+.someText > p:nth-child(2) {
+    margin-bottom: 3rem;
 }
 
 #signUpForm {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(33, 33, 33, 0.1);
+    padding: 3rem 4rem;
+}
+
+#signUpForm > p {
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .inputLine {
     display: flex;
+    gap: 6rem;
+}
+
+.inputItem {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+input {
+    border: 1px solid #E5E7EB;
+    border-radius: 0.4rem;
+    width: min(20vw, 25rem);
+    height: 3rem;
+    padding: 0.5rem;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid rgb(128, 128, 255);
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(33, 33, 33, 0.3);
+}
+
+button {
+    margin: 1rem 4rem;
+    color: #fff;
+    font-weight: 600;
+    background-color: #596D48;
+    border: none;
+    border-radius: 0.6rem;
+    width: min(15vw, 20rem);
+    min-height: 4rem;
+    padding: 1rem;
+}
+
+button:hover {
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(33, 33, 33, 0.3);
+}
+
+#forLogIn {
+    font-size: 1.5rem;
+}
+
+#forLogIn > a {
+    color: #596D48;
+    text-decoration-line: none;
+    font-weight: bold;
 }
