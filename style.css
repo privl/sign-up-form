@@ -142,11 +142,30 @@ input:focus {
 }
 
 input:invalid:not(:placeholder-shown):not(:focus) {
-    border: 1px solid rgb(255, 128, 128);
+    border: 1px solid red;
 }
 
-input:invalid:not(:placeholder-shown):not(:focus) + span::after {
-    content: '* invalid input';
+#first-name:invalid:not(:placeholder-shown):not(:focus) + span::after,
+#last-name:invalid:not(:placeholder-shown):not(:focus) + span::after {
+    content: '* invalid name';
+    color: red;
+    position: absolute;
+}
+
+#email:invalid:not(:placeholder-shown):not(:focus) + span::after {
+    content: '* invalid email';
+    color: red;
+    position: absolute;
+}
+
+#phone-number:invalid:not(:placeholder-shown):not(:focus) + span::after {
+    content: '* only accepts numbers';
+    color: red;
+    position: absolute;
+}
+
+#password:invalid:not(:placeholder-shown):not(:focus) + span::after {
+    content: '* 8 characters at least';
     color: red;
     position: absolute;
 }
@@ -175,4 +194,14 @@ button:hover {
     color: #596D48;
     text-decoration-line: none;
     font-weight: bold;
+}
+
+.not-matched:not(:placeholder-shown):not(:focus) {
+    border: 1px solid red;
+}
+
+.not-matched:not(:placeholder-shown):not(:focus) + span::after {
+    content: '* password does not match';
+    color: red;
+    position: absolute;
 }
